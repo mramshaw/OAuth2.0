@@ -6,7 +6,7 @@ The server-side code is __python__ (using the __Flask__ framework with __sqlalch
 
 This version of things assumes the current __Ubuntu LTS__ (16.04). It does not use __Vagrant__, which simplifies things quite a bit.
 
-The key functionality implemented were the __login__ (with Google) and __logout__ features.
+The key functions implemented were the __login__ (with Google) and __logout__ features.
 
 ## Updates (as of July 2017)
 
@@ -96,11 +96,11 @@ Verify that you are inside the directory that contains two directories named 'te
 
 #### Initialization
 
-1. Initialize the database:
+Initialize the database:
 
 	$ python database_setup.py
 
-2. [Optional] Populate the database with restaurants and menu items:
+[Optional] Populate the database with restaurants and menu items:
 
 	$ python lotsofmenus.py
 
@@ -118,7 +118,7 @@ The web browser of choice for testing this application is probably __chrome__.
 
 #### Testing
 
-You should also be able to view restaurants and menu items.
+You should be able to view restaurants and menu items.
 
 You should be able to log in (with Google) and log out.
 
