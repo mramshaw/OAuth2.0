@@ -2,6 +2,8 @@
 
 Another course from __Udacity__ which explains the use of __OAuth 2.0__ (updated here to __v2__).
 
+__OAuth__ is an open standard for authorization which allows for "delegated access" via a third-party authentication service (referred to as an _"__identity provider__"_). This avoids having to log into the service in question. It has also been known as __SSO__ (single sign-on) or ___federated identity___. There can be multiple OAuth paths; the one used here does not involve any __refresh tokens__ (which are optional).
+
 The server-side code is __python__ (using the __Flask__ framework with __sqlalchemy__) while the client-side code is __javascript__ with __jquery__ and __ajax__.
 
 This version of things assumes the current __Ubuntu LTS__ (16.04). It does not use __Vagrant__, which simplifies things quite a bit.
