@@ -129,6 +129,12 @@ Once logged in, you should be able to:
 * Edit or Delete restaurants you have created
 * Create, Edit, or Delete menu items for restaurants you have created
 
+## To Do
+
+- [ ] Implement GitHub as an identity provider.
+- [ ] Implement BitBucket as an identity provider.
+- [ ] Refactor code to more easily accomodate different identity providers.
+
 ## Credits
 
 Based upon:
