@@ -116,7 +116,7 @@ Open the following link in a web browser to view the restaurant application:
 
 	http://127.0.0.1:5000
 
-The web browser of choice for testing this application is probably __chrome__.
+The web browser of choice for testing this application is probably __chrome__ (known as __chromium__ on linux).
 
 #### Testing
 
