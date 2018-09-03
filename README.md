@@ -1,5 +1,7 @@
 # OAuth 2.0 - Udacity ud330 - Authentication & Authorization
 
+[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?targetFile=requirements.txt)
+
 Another course from __Udacity__ which explains the use of __OAuth 2.0__ (updated here to __v2__).
 
 __OAuth__ is an open standard for authorization which allows for "delegated access" via a third-party authentication service (referred to as an _"__identity provider__"_). This avoids having to log into the service in question. It has also been known as __SSO__ (single sign-on) or ___federated identity___. There can be multiple OAuth paths; the one used here does not involve any __refresh tokens__ (which are optional).
