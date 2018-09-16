@@ -1,6 +1,6 @@
 # OAuth 2.0 - Udacity ud330 - Authentication & Authorization
 
-[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?style=plastic&targetFile=requirements.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?targetFile=requirements.txt)
 
 Another course from __Udacity__ which explains the use of __OAuth 2.0__ (updated here to __v2__).
 

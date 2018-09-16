@@ -11,7 +11,7 @@
     <div id="signInButton">
          <span class="g-signin"
              data-scope="openid email"
-             data-clientid="330922837727-kqumpbu417slvqsk1hk6fhvv4h19pr9l.apps.googleusercontent.com"
+             data-clientid="YOUR_CLIENTID_ID_HERE.apps.googleusercontent.com"
              data-redirecturi="postmessage" # At most once
              data-accesstype="offline"
              data-cookiepolicy="single_host_origin"
@@ -48,10 +48,6 @@
                             $("#result").html("Failed to make server-side call!</br>" +
                                               "Check your configuration and console.");
                         }
-                //    },
-                //    error:       function(result) {
-                //        console.log("There was an error: " + result);
-                //        $("#result").html("<h1>" + result + "</h1>");
                     }
                 })
             }
