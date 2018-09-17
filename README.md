@@ -136,6 +136,8 @@ Once logged in, you should be able to:
 - [ ] Implement GitHub as an identity provider.
 - [ ] Implement BitBucket as an identity provider.
 - [ ] Refactor code to more easily accomodate different identity providers.
+- [ ] Refactor dependencies into a `requirements.txt` file. 
+- [ ] Verify code with Python 3 and `pip3`.
 
 ## Credits
 
