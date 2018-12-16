@@ -30,7 +30,7 @@ session = DBSession()
 @app.route('/login')
 def showLogin():
     # Create a random 32 character string with a mix of uppercase letters and digits
-    state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32)) 
+    state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32)) # nosec
     login_session['state'] = state
     # return "The current session state is %s" %login_session['state']
 

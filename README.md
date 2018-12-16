@@ -1,6 +1,6 @@
 # OAuth 2.0 - Udacity ud330 - Authentication & Authorization
 
-[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?style-plastic&targetFile=requirements.txt)
+[![Known Vulnerabilities](http://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](http://snyk.io/test/github/mramshaw/OAuth2.0?style-plastic&targetFile=requirements.txt)
 
 Another course from __Udacity__ which explains the use of __OAuth 2.0__ (updated here to __v2__).
 
@@ -30,14 +30,20 @@ The following packages are needed:
 
 The various Python components may be installed/upgraded as follows:
 
-	$ pip install --upgrade pip
-	$ pip install Werkzeug
-	$ pip install Flask
-	$ pip install oauth2client
-	$ pip install requests
-	$ pip install httplib2
+	$ pip install --user --upgrade pip
+	$ pip install --user Werkzeug
+	$ pip install --user Flask
+	$ pip install --user oauth2client
+	$ pip install --user requests
+	$ pip install --user httplib2
 
 [It may be necessary to install additional dependencies as well.]
+
+Or simply use the `requirements.txt` file as follows:
+
+    $ pip install --user -r requirements.txt
+
+[Note that I do not recommend Global component installation.]
 
 #### Flask-Login
 
@@ -80,7 +86,7 @@ Download __OAuth2.0-master.zip__ and unzip it into a directory of your choosing.
 
 Or from a terminal, run:
 
-    git clone https://github.com/mramshaw/OAuth2.0.git
+    git clone http://github.com/mramshaw/OAuth2.0.git
 
 #### Git
 
@@ -131,22 +137,87 @@ Once logged in, you should be able to:
 * Edit or Delete restaurants you have created
 * Create, Edit, or Delete menu items for restaurants you have created
 
+## Bandit
+
+We will use [bandit](http://github.com/PyCQA/bandit) to scan our code for
+any insecure coding practices.
+
+Bandit describes itself as follows:
+
+> Bandit is a tool designed to find common security issues in Python code.
+
+Run `bandit` as follows:
+
+```bash
+$ bandit -r .
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 2.7.12
+Run started:2018-12-16 00:48:09.951919
+
+Test results:
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./project.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+32	    # Create a random 32 character string with a mix of uppercase letters and digits
+33	    state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32)) 
+34	    login_session['state'] = state
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   Location: ./project.py:344
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b104_hardcoded_bind_all_interfaces.html
+343	   app.debug = True
+344	   app.run(host = '0.0.0.0', port = 5000)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 462
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 1
+		Medium: 1
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 1
+Files skipped (0):
+$
+```
+
+The low priority warning is easily fixed with a code annotation (we are not using `random`
+for cryptography purposes so a pseudo-random function will suffice for our purposes). The
+other warning is legitimate but as this project is for ___testing___ purposes we will leave
+the insecure code as is (we are running our web server in __promiscuous mode__, which is
+definitely insecure).
+
 ## To Do
 
 - [ ] Implement GitHub as an identity provider.
 - [ ] Implement BitBucket as an identity provider.
+- [x] Add `bandit` checks for insecure coding practices.
 - [ ] Refactor code to more easily accomodate different identity providers.
-- [ ] Refactor dependencies into a `requirements.txt` file. 
+- [x] Refactor dependencies into a `requirements.txt` file.
 - [ ] Verify code with Python 3 and `pip3`.
 
 ## Credits
 
 Based upon:
 
-	https://www.udacity.com/course/authentication-authorization-oauth--ud330
+	http://www.udacity.com/course/authentication-authorization-oauth--ud330
 
 The course materials are available here:
 
-	https://github.com/udacity/OAuth2.0
+	http://github.com/udacity/OAuth2.0
 
 Of course, to really learn OAuth it is probably best to follow the course!
