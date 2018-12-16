@@ -201,11 +201,17 @@ other warning is legitimate but as this project is for ___testing___ purposes we
 the insecure code as is (we are running our web server in __promiscuous mode__, which is
 definitely insecure).
 
+UPDATE: Snyk.io scanning flagged `bandit` as insecure due to a `pyyaml` dependency. There
+is a pyyaml dependency in `flask-ask` for an incompatible version of pyyaml; the easy fix
+is simply to remove `bandit` as a project dependency. How ironic that a security linter
+should itself use insecure code.
+
 ## To Do
 
 - [ ] Implement GitHub as an identity provider.
 - [ ] Implement BitBucket as an identity provider.
 - [x] Add `bandit` checks for insecure coding practices.
+- [x] Revert `bandit` as a project dependency as it is itself insecure
 - [ ] Refactor code to more easily accomodate different identity providers.
 - [x] Refactor dependencies into a `requirements.txt` file.
 - [ ] Verify code with Python 3 and `pip3`.
