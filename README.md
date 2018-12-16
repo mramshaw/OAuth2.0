@@ -206,6 +206,52 @@ is a pyyaml dependency in `flask-ask` for an incompatible version of pyyaml; the
 is simply to remove `bandit` as a project dependency. How ironic that a security linter
 should itself use insecure code.
 
+Having fixed the low-priority warning we can create a bandit __baseline__ file as follows:
+
+    $ bandit -r . -f json -o bandit_baseline
+
+Then to re-parse our code - ignoring the baseline - we run `bandit` as follows:
+
+    $ bandit -r . -b bandit_baseline
+
+This should look as follows:
+
+```bash
+$ bandit -r . -b bandit_baseline
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 2.7.12
+Run started:2018-12-16 01:45:00.468466
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 462
+	Total lines skipped (#nosec): 1
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 0
+Files skipped (0):
+$
+```
+
+Note that our annotated warning is listed, as well as our insecure code issue. All that
+has been suppressed is the details of our insecure code.
+
+[Of course it is still possible to produce a normal run via <kbd>bandit -r .</kbd>.]
+
 ## To Do
 
 - [ ] Implement GitHub as an identity provider.
