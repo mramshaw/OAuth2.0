@@ -1,10 +1,56 @@
 # OAuth 2.0 - Udacity ud330 - Authentication & Authorization
 
-[![Known Vulnerabilities](http://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](http://snyk.io/test/github/mramshaw/OAuth2.0?style-plastic&targetFile=requirements.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?style-plastic&targetFile=requirements.txt)
 
-Another course from __Udacity__ which explains the use of __OAuth 2.0__ (updated here to __v2__).
+![OAuth logo](images/oauth-logo.png)
 
-__OAuth__ is an open standard for authorization which allows for "delegated access" via a third-party authentication service (referred to as an _"__identity provider__"_). This avoids having to log into the service in question. It has also been known as __SSO__ (single sign-on) or ___federated identity___. There can be multiple OAuth paths; the one used here does not involve any __refresh tokens__ (which are optional).
+Another great course from [Udacity](http://www.udacity.com/) which explains the use of [OAuth 2.0](http://oauth.net/2/) (updated here to __v2__).
+
+## Contents
+
+The contents are as follows:
+
+* [OAuth](#oauth)
+* [Identity Providers](#identity-providers)
+* [Frameworks Used](#frameworks-used)
+* [Updates (as of July 2017)](#updates-as-of-july-2017)
+    * [apt-get](#apt-get)
+    * [pip](#pip)
+    * [Flask-login](#flask-login)
+    * [Current Versions](#current-versions)
+    * [jquery](#jquery)
+    * [Google OAuth 2.9](#google-oauth-2.9)
+* [Get the Source Code](#get-the-source-code)
+    * [git](#git)
+* [Running the Restaurant Menu App](#running-the-restaurant-menu-app)
+    * [Initialization](#Initialization)
+    * [Running](#running)
+    * [Testing](#testing)
+* [Security scanning with Bandit](#security-scanning-with-bandit)
+* [To Do](#to do)
+* [Credits](#credits)
+
+## OAuth
+
+__OAuth__ is an open standard for authorization which allows for "delegated access" via a third-party authentication service
+(referred to as an _"__identity provider__"_). This avoids having to log into the service in question. It has also been known
+as __SSO__ (single sign-on) or ___federated identity___. There can be multiple OAuth paths; the one used here does not involve
+any __refresh tokens__ (which are optional).
+
+## Identity Providers
+
+Most of the social networks (FaceBook, Google, HipChat, Instagram, Slack, Spotify, Twitch) can be used as ___Identity providers___.
+
+Of course, using these services as Identity Providers also facilitates their tracking of individual users and user preferences,
+so it is generally a servive that they are happy to provide.
+
+[Here we will be using ___Google___.]
+
+![GitHub](images/GitHub.png) ![BitBucket](images/BitBucket.png)
+
+In addition, a lot of coder networks (GitHub, GitLab, BitBucket) can also be used as Identity Providers.
+
+## Frameworks Used
 
 The server-side code is __python__ (using the __Flask__ framework with __sqlalchemy__) while the client-side code is __javascript__ with __jquery__ and __ajax__.
 
@@ -88,7 +134,7 @@ Or from a terminal, run:
 
     git clone http://github.com/mramshaw/OAuth2.0.git
 
-#### Git
+#### git
 
 To install __git__: [download Git from git-scm.com](http://git-scm.com/downloads) and install the version for your operating system.
 
@@ -137,7 +183,7 @@ Once logged in, you should be able to:
 * Edit or Delete restaurants you have created
 * Create, Edit, or Delete menu items for restaurants you have created
 
-## Bandit
+## Security scanning with Bandit
 
 We will use [bandit](http://github.com/PyCQA/bandit) to scan our code for
 any insecure coding practices.
@@ -254,13 +300,17 @@ has been suppressed is the details of our insecure code.
 
 ## To Do
 
-- [ ] Implement GitHub as an identity provider.
-- [ ] Implement BitBucket as an identity provider.
-- [x] Add `bandit` checks for insecure coding practices.
+- [x] Add Table of Contents
+- [x] Add notes on Identity Providers
+- [ ] Implement GitHub as an identity provider
+- [ ] Implement BitBucket as an identity provider
+- [x] Add `bandit` checks for insecure coding practices
 - [x] Revert `bandit` as a project dependency as it is itself insecure
-- [ ] Refactor code to more easily accomodate different identity providers.
-- [x] Refactor dependencies into a `requirements.txt` file.
-- [ ] Verify code with Python 3 and `pip3`.
+- [ ] Refactor code to more easily accomodate different identity providers
+- [x] Refactor dependencies into a `requirements.txt` file
+- [ ] Dockerize everything to avoid local dependencies
+- [ ] Verify code with Python 3 and `pip3`
+- [ ] Verify code with latest components
 
 ## Credits
 
