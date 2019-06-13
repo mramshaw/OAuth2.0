@@ -14,6 +14,7 @@ The contents are as follows:
 
 * [OAuth](#oauth)
 * [Identity Providers](#identity-providers)
+* [Scope](#scope)
 * [Frameworks Used](#frameworks-used)
 * [Updates (as of July 2017)](#updates-as-of-july-2017)
     * [apt-get](#apt-get)
