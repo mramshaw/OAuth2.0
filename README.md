@@ -1,10 +1,12 @@
-# OAuth 2.0 - Udacity ud330 - Authentication & Authorization
+# OAuth 2.0
 
 [![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/OAuth2.0/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/OAuth2.0?style-plastic&targetFile=requirements.txt)
 
-![OAuth logo](images/oauth-logo.png)
+# Udacity ud330 - Authentication & Authorization
 
 Another great course from [Udacity](http://www.udacity.com/) which explains the use of [OAuth 2.0](http://oauth.net/2/) (updated here to __v2__).
+
+![OAuth logo](images/oauth-logo.png)
 
 ## Contents
 
@@ -19,7 +21,7 @@ The contents are as follows:
     * [Flask-login](#flask-login)
     * [Current Versions](#current-versions)
     * [jquery](#jquery)
-    * [Google OAuth 2.9](#google-oauth-2.9)
+    * [Google OAuth 2.9](#google-oauth-29)
 * [Get the Source Code](#get-the-source-code)
     * [git](#git)
 * [Running the Restaurant Menu App](#running-the-restaurant-menu-app)
@@ -27,7 +29,7 @@ The contents are as follows:
     * [Running](#running)
     * [Testing](#testing)
 * [Security scanning with Bandit](#security-scanning-with-bandit)
-* [To Do](#to do)
+* [To Do](#to-do)
 * [Credits](#credits)
 
 ## OAuth
@@ -39,10 +41,10 @@ any __refresh tokens__ (which are optional).
 
 ## Identity Providers
 
-Most of the social networks (FaceBook, Google, HipChat, Instagram, Slack, Spotify, Twitch) can be used as ___Identity providers___.
+Most of the social networks (FaceBook, Google, HipChat, Instagram, Slack, Spotify, Twitch) can be used as Identity Providers.
 
 Of course, using these services as Identity Providers also facilitates their tracking of individual users and user preferences,
-so it is generally a servive that they are happy to provide.
+so it is generally a service that they are happy to provide.
 
 [Here we will be using ___Google___.]
 
@@ -136,7 +138,7 @@ Or from a terminal, run:
 
 #### git
 
-To install __git__: [download Git from git-scm.com](http://git-scm.com/downloads) and install the version for your operating system.
+To install __git__: download git from [git-scm.com](http://git-scm.com/downloads) and install the version for your operating system.
 
 ## Running the Restaurant Menu App
 
@@ -144,7 +146,7 @@ Open a terminal. Type the following:
 
 	$ ls -al
 
-Verify that you are inside the directory that contains two directories named 'templates' and 'static' as well as:
+Verify that you are inside the directory that contains two directories named `templates` and `static` as well as:
 
 * database_setup.py
 * lotsofmenus.py
