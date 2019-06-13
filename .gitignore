@@ -1,5 +1,6 @@
+bandit_baseline
 client_secrets.json
 fb_client_secrets.json
 restaurantmenu.db
 restaurantmenuwithusers.db
-*.pyc
+**.pyc

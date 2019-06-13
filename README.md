@@ -48,9 +48,9 @@ so it is generally a service that they are happy to provide.
 
 [Here we will be using ___Google___.]
 
-![GitHub](images/GitHub.png) ![BitBucket](images/BitBucket.png)
-
 In addition, a lot of coder networks (GitHub, GitLab, BitBucket) can also be used as Identity Providers.
+
+![GitHub](images/GitHub.png) ![GitLab](images/logo_wordmark.svg) ![BitBucket](images/BitBucket.png)
 
 ## Frameworks Used
 
@@ -138,7 +138,7 @@ Or from a terminal, run:
 
 #### git
 
-To install __git__: download git from [git-scm.com](http://git-scm.com/downloads) and install the version for your operating system.
+To install __git__: download from [git-scm.com](http://git-scm.com/downloads) and install the version for your operating system.
 
 ## Running the Restaurant Menu App
 
@@ -172,7 +172,7 @@ Open the following link in a web browser to view the restaurant application:
 
 	http://127.0.0.1:5000
 
-The web browser of choice for testing this application is probably __chrome__ (known as __chromium__ on linux).
+The web browser of choice for testing this application is probably __chrome__ (or __chromium__ on linux).
 
 #### Testing
 
