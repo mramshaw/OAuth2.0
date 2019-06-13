@@ -52,6 +52,15 @@ In addition, a lot of coder networks (GitHub, GitLab, BitBucket) can also be use
 
 ![GitHub](images/GitHub.png) ![GitLab](images/logo_wordmark.svg) ![BitBucket](images/BitBucket.png)
 
+[Identity Providers are sometimes referred to as ___Authorization Servers___ in the literature.]
+
+## Scope
+
+The use of OAuth grants the application a specified sphere of influence (often simply an email address,
+but it can also be a range of things). The user will be informed of the exact permissions that the app
+is requesting and can either grant or deny the access. Of course, if the user denies access the app
+will generally have to terminate.
+
 ## Frameworks Used
 
 The server-side code is __python__ (using the __Flask__ framework with __sqlalchemy__) while the client-side code is __javascript__ with __jquery__ and __ajax__.
@@ -313,6 +322,7 @@ has been suppressed is the details of our insecure code.
 - [ ] Dockerize everything to avoid local dependencies
 - [ ] Verify code with Python 3 and `pip3`
 - [ ] Verify code with latest components
+- [ ] Clean up code to conform to `pylint`, `pycodestyle` and `pydocstyle`
 
 ## Credits
 
